@@ -34,3 +34,21 @@
         >>> println('hello hello')
         hello hello
         >>> 
+# Running the examples
+    v hello_world.v && ./hello_world # or simply
+    v run hello_world.v              # This runs the program, but doesn't create the executable
+
+    v word_counter.v && ./word_counter cinderella.txt
+    v news_fetcher.v && ./news_fetcher
+    v tetris.v && ./tetris
+    In order to build Tetris and anything else using the graphics module, you will need to install glfw and freetype.
+
+    If you plan to use the http package, you also need to install libcurl.
+
+    glfw and libcurl dependencies will be removed soon.
+
+    Ubuntu:
+    sudo apt install glfw libglfw3-dev libfreetype6-dev libcurl3-dev
+
+    macOS:
+    brew install glfw freetype curl
