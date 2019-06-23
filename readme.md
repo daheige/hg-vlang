@@ -10,3 +10,17 @@
     原生并发并且支持代码热重载（golang要是也支持热重载就好了）
     跨平台图形库以及跨平台原生UI库，做游戏和做界面就方便了（golang目前的fyne库做GUI也不错，基于OpenGL实现
     Vlang会在今年6月份完全开源，一起期待吧！（目前作者上线了Vlang的体验区,有兴趣的同学可以去感受一哈:https://vlang.io/play）
+
+# install
+    Linux and macOS
+    mkdir -p ~/code && cd ~/code  # ~/code directory has to be used (it's a temporary limitation)
+    git clone https://github.com/vlang/v
+    cd v/compiler
+    wget https://vlang.io/v.c # Download the V compiler's source translated to C
+    cc -w -o vc v.c           # Build it with Clang or GCC
+    ./vc -o v .               # Use the resulting V binary to build V from V source
+    That's it! Now you have a V executable at ~/code/v/compiler/v.
+
+    You can create a symlink so that it's globally available:
+
+    sudo ln -s $HOME/code/v/compiler/v /usr/local/bin/v
