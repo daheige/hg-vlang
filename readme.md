@@ -24,3 +24,13 @@
     You can create a symlink so that it's globally available:
 
     sudo ln -s $HOME/code/v/compiler/v /usr/local/bin/v
+
+    查看版本
+        $ v
+        V 0.0.12
+        Use Ctrl-D to exit
+        For now you have to use println() to print values, this will be fixed soon
+
+        >>> println('hello hello')
+        hello hello
+        >>> 
