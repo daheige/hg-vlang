@@ -15,6 +15,7 @@ fn main() {
     //定义一个数组，50个元素，全部都是0
 	mut ids := [0; nr_ids]// This creates an array with 50 zeroes
 	println(ids)
+	println('daheige' in names)
 }
 
 /**

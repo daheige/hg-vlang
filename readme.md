@@ -16,24 +16,18 @@
     mkdir -p ~/code && cd ~/code  # ~/code directory has to be used (it's a temporary limitation)
     git clone https://github.com/vlang/v
     cd v/compiler
-    wget https://vlang.io/v.c # Download the V compiler's source translated to C
-    cc -w -o vc v.c           # Build it with Clang or GCC
-    ./vc -o v .               # Use the resulting V binary to build V from V source
-    That's it! Now you have a V executable at ~/code/v/compiler/v.
-
-    You can create a symlink so that it's globally available:
+    wget https://raw.githubusercontent.com/vlang/vc/master/v.c  
+    cc -std=gnu11 -w -o v v.c  # Build it with Clang or GCC
+    ./v -o v .                 # Use the resulting V binary to build V from V source
+    ./v -o v .                 # Build the compiler again to make sure it works
 
     sudo ln -s $HOME/code/v/compiler/v /usr/local/bin/v
-
     查看版本
         $ v
-        V 0.0.12
+        V 0.1.5
         Use Ctrl-D to exit
         For now you have to use println() to print values, this will be fixed soon
-
-        >>> println('hello hello')
-        hello hello
-        >>> 
+        >>>
 # Running the examples
     v hello_world.v && ./hello_world # or simply
     v run hello_world.v              # This runs the program, but doesn't create the executable
@@ -48,7 +42,7 @@
     glfw and libcurl dependencies will be removed soon.
 
     Ubuntu:
-    sudo apt install glfw libglfw3-dev libfreetype6-dev libcurl3-dev
+    sudo apt install libglfw3 libglfw3-dev libfreetype6-dev libcurl3-dev
 
     macOS:
     brew install glfw freetype curl

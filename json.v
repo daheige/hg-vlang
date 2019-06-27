@@ -1,3 +1,5 @@
+import json
+
 struct User {
 	name string
 	age  int
@@ -13,5 +15,4 @@ fn main() {
     
 	println(user.name)
 	println(user.age)
-	
 }
